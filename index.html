@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-
     <div class="mySlides fade">
       <img src="images/milkyway.jpg" style="width:100%">
       <p><cite>You cannot look up at the night sky on the Planet Earth and not wonder what it's like to be up there amongst the stars.</cite> Tom Hanks
@@ -23,21 +22,5 @@
          tucked away in some forgotten corner of a universe in which there are far more galaxies than people.</cite> Carl Sagan
       </p>
     </div>
-    <script>
-var myIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}
-    x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 12000); // Change image every 12 seconds
-}
-</script>
-  </body>
+    <script src="javascript.js"></script>
 </html>
