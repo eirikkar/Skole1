@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<style>
-.mySlides {display:none;}
-</style>
+  <head>
+    <meta charset="UTF-8">
+    <title>Night Sky</title>
+    <link rel="stylesheet" href="style2.css">
+  </head>
 <body>
+<div class="slideshow-container">
 
-<h2 class="w3-center">Automatic Slideshow</h2>
-
-<div class="w3-content w3-section" style="max-width:500px">
-  <img class="mySlides" src="images/milkyway.jpg" style="width:100%">
-  <img class="mySlides" src="images/milkyway2.jpg" style="width:100%">
-  <img class="mySlides" src="images/milkyway3.jpg" style="width:100%">
+<div class="mySlides fade">
+  <img src="images/milkyway.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
 </div>
 
-<script>
-var myIndex = 0;
-carousel();
+<div class="mySlides fade">
+  <img src="images/milkyway2.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
 
-function carousel() {
+<div class="mySlides fade">
+  <img src="images/milkyway3.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
     var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
     }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}
-    x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 2000); // Change image every 2 seconds
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 </script>
 

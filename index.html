@@ -6,12 +6,22 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <p>"You cannot look up at the night sky on the Planet Earth and not wonder what it's like to be up there amongst the stars.
-      And I always look up at the moon and see it as the single most romantic place within the cosmos."
-    </p>
-      <img class="mySlides" src="images/milkyway.jpg" style="width:100%">
-      <img class="mySlides" src="images/milkyway2.jpg" style="width:100%">
-      <img class="mySlides" src="images/milkyway3.jpg" style="width:100%">
+
+    <div class="mySlides fade">
+      <img src="images/milkyway.jpg" style="width:100%">
+      <p><cite>You cannot look up at the night sky on the Planet Earth and not wonder what it's like to be up there amongst the stars.</cite> Tom Hanks
+      </p>
+    </div>
+    <div class="mySlides fade">
+      <img src="images/milkyway2.jpg" style="width:100%">
+      <p><cite>Who among us has never looked up into the heavens on a starlit night, lost in wonder at the vastness of space and the beauty of the stars?</cite> Jeb Bush
+      </p>
+    </div>
+    <div class="mySlides fade">
+      <img src="images/milkyway3.jpg" style="width:100%">
+      <p><cite>Who are we? We find that we live on an insignificant planet of a humdrum star lost in a galaxy
+         tucked away in some forgotten corner of a universe in which there are far more galaxies than people.</cite> Carl Sagan
+      </p>
     </div>
     <script>
 var myIndex = 0;
@@ -26,7 +36,7 @@ function carousel() {
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}
     x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 4000); // Change image every 4 seconds
+    setTimeout(carousel, 12000); // Change image every 12 seconds
 }
 </script>
   </body>
